@@ -10,9 +10,37 @@
 .header{
     background-color: grey;
     padding: 40px;
-    border: 2px black solid;
+    border: 50px black solid;
+    border-image: url(dog.jpg) 67;
     margin: 20px;
+    background-image: url("dog.jpg"), url(demo.jpg);
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    /*animation: header-animation 4s infinite;*/
 }
+
+@keyframes header-animation{
+    0%{
+        background-color: red;
+        color: aqua;
+    }
+    25%{
+        background: yellow;
+        color: blue;
+    }
+    50%{
+        background-color: orange;
+        color: white;
+    }
+    100%{
+        background-color: grey;
+        color: white;
+    }
+
+}
+
+
 /*.header_link{
     color: white;
     text-decoration: none;
@@ -21,6 +49,19 @@
 nav a{
     color:white;
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+nav a:visited{
+    color: brown;
+}
+nav a:link{
+    color: aqua;
 }
 
 .about_us{
@@ -40,4 +81,21 @@ nav a{
     color: white;
     padding: 10px;
     border: 2px black solid;
+}
+img{
+    max-width: 100%;
+}
+
+@media screen and  (max-width: 600px) {
+    body{
+        background-color: chocolate;
+    }
+    
+}
+@media screen and (max-width: 812px) and (min-width: 600px) {
+    body{
+        background: blue;
+        color: white;
+    }
+    
 }
